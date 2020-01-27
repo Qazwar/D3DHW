@@ -1,5 +1,15 @@
 #include<Windows.h>
 
+//自定义的窗口处理函数
+LRESULT CALLBACK WndProc(HWND hWnd,UINT msg,WPARAM wParam, LPARAM lParam) {
+	switch (msg) {
+	case WM_CLOSE:	//点击窗体关闭按钮
+		PostQuitMessage(69);	//抛出给wParam
+		break;
+	}
+	return DefWindowProc(hWnd, msg, wParam, lParam);
+}
+
 //windows类型的主方法
 int CALLBACK WinMain(
 	HINSTANCE hInstance,
@@ -12,7 +22,8 @@ int CALLBACK WinMain(
 	WNDCLASSEX wc = { 0 };
 	wc.cbSize = sizeof(wc);
 	wc.style = CS_OWNDC;
-	wc.lpfnWndProc = DefWindowProc;
+	//DefWindowProc 默认的窗口处理函数，我们可以把不关心的消息都丢给它来处理
+	wc.lpfnWndProc = WndProc;
 	wc.cbClsExtra = 0;
 	wc.cbWndExtra = 0;
 	wc.hInstance = hInstance;
@@ -33,6 +44,20 @@ int CALLBACK WinMain(
 	);
 	//show window
 	ShowWindow(hWnd, SW_SHOW);
-	while (true);
-	return 0;
+	
+	//message pump
+	//为窗体注册事件机制
+	BOOL gResult; //an int
+	MSG msg;	//注册消息
+	while ((gResult = GetMessage(&msg, nullptr, 0, 0)) > 0) {
+		TranslateMessage(&msg);
+		DispatchMessage(&msg);
+	}
+	
+	if (gResult == -1) {
+		return -1;	//error
+	}
+	else {
+		return msg.wParam;
+	}
 }
