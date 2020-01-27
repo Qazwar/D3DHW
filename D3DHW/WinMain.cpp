@@ -1,12 +1,30 @@
 #include<Windows.h>
+#include"WindowsMessageMap.h"
 
 //自定义的窗口处理函数
 LRESULT CALLBACK WndProc(HWND hWnd,UINT msg,WPARAM wParam, LPARAM lParam) {
+
+	static WindowsMessageMap mm;
+	OutputDebugString(mm(msg, lParam, wParam).c_str());
+
+
 	switch (msg) {
 	case WM_CLOSE:	//点击窗体关闭按钮
 		PostQuitMessage(69);	//抛出给wParam
 		break;
+	case WM_KEYDOWN:
+		if (wParam == 'F') {	//wParam对应字符ascii 
+			SetWindowTextA(hWnd, "F down");
+		}
+		break;
+	case WM_KEYUP:
+		if (wParam == 'F') {	//wParam对应字符ascii 
+			SetWindowTextA(hWnd, "F up");
+		}
+		break;
 	}
+	
+
 	return DefWindowProc(hWnd, msg, wParam, lParam);
 }
 
