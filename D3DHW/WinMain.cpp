@@ -1,4 +1,5 @@
 #include<Windows.h>
+#include<sstream>
 #include"WindowsMessageMap.h"
 
 //自定义的窗口处理函数
@@ -17,11 +18,25 @@ LRESULT CALLBACK WndProc(HWND hWnd,UINT msg,WPARAM wParam, LPARAM lParam) {
 			SetWindowTextA(hWnd, "F down");
 		}
 		break;
-	case WM_KEYUP:
+	case WM_KEYUP:	
 		if (wParam == 'F') {	//wParam对应字符ascii 
 			SetWindowTextA(hWnd, "F up");
 		}
 		break;
+	case WM_CHAR:	//a message for input text
+	{
+		static std::string title;
+		title.push_back((char)wParam);
+		SetWindowText(hWnd, title.c_str());
+	}
+	case WM_LBUTTONDOWN:
+	{
+		const POINTS pt = MAKEPOINTS(lParam);
+		std::ostringstream oss;
+		oss << "(" << pt.x << "," << pt.y << ")";
+		SetWindowText(hWnd, oss.str().c_str());
+
+	}
 	}
 	
 
