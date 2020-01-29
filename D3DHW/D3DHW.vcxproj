@@ -142,8 +142,15 @@
   <ItemGroup>
     <ClInclude Include="ChilliWin.h" />
     <ClInclude Include="D3DException.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Window.h" />
     <ClInclude Include="WindowsMessageMap.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="chili.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="D3DHW.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
