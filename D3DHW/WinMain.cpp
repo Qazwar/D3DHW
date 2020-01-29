@@ -80,18 +80,33 @@ int CALLBACK WinMain(
 	//
 	////message pump
 	////为窗体注册事件机制
-	Window wnd(800, 300, "A window");
-	BOOL gResult; //an int
-	MSG msg;	//注册消息
-	while ((gResult = GetMessage(&msg, nullptr, 0, 0)) > 0) {
-		TranslateMessage(&msg);
-		DispatchMessage(&msg);
+	try {
+
+		Window wnd(800, 300, "A window");
+		BOOL gResult; //an int
+		MSG msg;	//注册消息
+		while ((gResult = GetMessage(&msg, nullptr, 0, 0)) > 0) {
+			// TranslateMessage will post auxilliary WM_CHAR messages from key msgs
+			TranslateMessage(&msg);
+			DispatchMessage(&msg);
+		}
+		// check if GetMessage call itself borked
+		if (gResult == -1) {
+			throw CHWND_LAST_EXCEPT();	//error
+		}
+		// wParam here is the value passed to PostQuitMessage
+		return msg.wParam;
 	}
-	
-	if (gResult == -1) {
-		return -1;	//error
+	catch (const D3DException &e) {
+		MessageBox(nullptr, e.what(), e.GetType(), MB_OK | MB_ICONEXCLAMATION);
 	}
-	return msg.wParam;
-	
+	catch (const std::exception& e) {
+		MessageBox(nullptr, e.what(), "Standard Exception", MB_OK | MB_ICONEXCLAMATION);
+	}
+	catch (...){
+		MessageBox(nullptr, "No details available", "Unknown Exception", MB_OK | MB_ICONEXCLAMATION);
+	}
+	return -1;
+
 
 }

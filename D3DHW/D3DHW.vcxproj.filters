@@ -24,6 +24,9 @@
     <ClCompile Include="Window.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="D3DException.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="WindowsMessageMap.h">
@@ -33,6 +36,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="ChilliWin.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="D3DException.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
