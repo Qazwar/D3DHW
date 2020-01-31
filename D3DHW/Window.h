@@ -1,6 +1,8 @@
 #pragma once
 #include"ChilliWin.h"
 #include"D3DException.h"
+#include"Keyboard.h"
+
 //自定义的window
 class Window {
 public:
@@ -49,6 +51,9 @@ private:
 	int width;
 	int height;
 	HWND hWnd;
+
+public:
+	Keyboard kbd;
 };
 
 

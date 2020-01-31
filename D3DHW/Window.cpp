@@ -1,7 +1,7 @@
 #include"Window.h"
 #include<sstream>
 #include"D3DException.h"
-#include"./resource.h"
+#include"resource.h"
 
 //Window Class Stuff
 Window::WindowClass Window::WindowClass::wndClass;
@@ -107,6 +107,28 @@ LRESULT Window::HandleMsg(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) noe
 	case WM_CLOSE:
 		PostQuitMessage(0);
 		return 0;
+
+	case WM_KILLFOCUS:	//当对话框失去聚焦的时候 新窗体的keystates和原有的不同
+		kbd.ClearState();
+		break;
+		/*********** KEYBOARD MESSAGES ***********/
+		// syskey commands need to be handled to track ALT key (VK_MENU) and F10
+	case WM_SYSKEYDOWN:
+	case WM_KEYDOWN:
+		//第30位检测是否允许autorepeat
+		if (!(lParam & 0x40000000) || kbd.AutorepeatIsEnabled()) // filter autorepeat
+		{
+			kbd.OnKeyPressed(static_cast<unsigned char>(wParam));
+		}
+		break;
+	case WM_SYSKEYUP:
+	case WM_KEYUP:
+		kbd.OnKeyReleased(static_cast<unsigned char>(wParam));
+		break;
+	case WM_CHAR:
+		kbd.OnChar(static_cast<unsigned char>(wParam));
+		break;
+		/*********** END KEYBOARD MESSAGES ***********/
 	}
 
 	return DefWindowProc(hWnd, msg, wParam, lParam);
