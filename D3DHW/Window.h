@@ -3,6 +3,7 @@
 #include"D3DException.h"
 #include"Keyboard.h"
 #include"Mouse.h"
+#include <optional>
 
 //自定义的window
 class Window {
@@ -43,6 +44,7 @@ public:
 	Window(const Window&) = delete;
 	Window& operator=(const Window&) = delete;
 	void SetTitle(const std::string& title);	//set window title, fix FAIL
+	static std::optional<int> ProcessMessages();	//rewrite message queue
 
 	
 private:

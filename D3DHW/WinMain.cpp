@@ -1,5 +1,5 @@
 //#include<Windows.h>
-#include"Window.h"
+#include"App.h"
 #include<sstream>
 #include"WindowsMessageMap.h"
 
@@ -81,87 +81,87 @@ int CALLBACK WinMain(
 	////message pump
 	////为窗体注册事件机制
 	try {
+		return App().Go();
+		//Window wnd(800, 300, "A window");
+		//BOOL gResult; //an int
+		//MSG msg;	//注册消息
+		//while ((gResult = GetMessage(&msg, nullptr, 0, 0)) > 0) {
+		//	// TranslateMessage will post auxilliary WM_CHAR messages from key msgs
+		//	TranslateMessage(&msg);
+		//	DispatchMessage(&msg);
 
-		Window wnd(800, 300, "A window");
-		BOOL gResult; //an int
-		MSG msg;	//注册消息
-		while ((gResult = GetMessage(&msg, nullptr, 0, 0)) > 0) {
-			// TranslateMessage will post auxilliary WM_CHAR messages from key msgs
-			TranslateMessage(&msg);
-			DispatchMessage(&msg);
+		//	//// test wheel up and downcode
+		//	//static int i = 0;
+		//	//while (!wnd.mouse.IsEmpty())
+		//	//{
+		//	//	const auto e = wnd.mouse.Read();
+		//	//	switch (e.GetType())
+		//	//	{
+		//	//	case Mouse::Event::Type::WheelUp:
+		//	//		i++;
+		//	//		{
+		//	//			std::ostringstream oss;
+		//	//			oss << "Up: " << i;
+		//	//			wnd.SetTitle(oss.str());
+		//	//		}
+		//	//		break;
+		//	//	case Mouse::Event::Type::WheelDown:
+		//	//		i--;
+		//	//		{
+		//	//			std::ostringstream oss;
+		//	//			oss << "Down: " << i;
+		//	//			wnd.SetTitle(oss.str());
+		//	//		}
+		//	//		break;
+		//	//	}
+		//	//}
 
-			// test wheel up and downcode
-			static int i = 0;
-			while (!wnd.mouse.IsEmpty())
-			{
-				const auto e = wnd.mouse.Read();
-				switch (e.GetType())
-				{
-				case Mouse::Event::Type::WheelUp:
-					i++;
-					{
-						std::ostringstream oss;
-						oss << "Up: " << i;
-						wnd.SetTitle(oss.str());
-					}
-					break;
-				case Mouse::Event::Type::WheelDown:
-					i--;
-					{
-						std::ostringstream oss;
-						oss << "Down: " << i;
-						wnd.SetTitle(oss.str());
-					}
-					break;
-				}
-			}
-
-			//// test mouse drag code
-			//while (!wnd.mouse.IsEmpty())
-			//{
-			//	const auto e = wnd.mouse.Read();
-			//	switch (e.GetType())
-			//	{
-			//	case Mouse::Event::Type::Leave:
-			//		wnd.SetTitle("Gone!");
-			//		break;
-			//	case Mouse::Event::Type::Move:
-			//	{
-			//		std::ostringstream oss;
-			//		oss << "Mouse moved to (" << e.GetPosX() << "," << e.GetPosY() << ")";
-			//		wnd.SetTitle(oss.str());
-			//	}
-			//	break;
-			//	}
-			//}
+		//	//// test mouse drag code
+		//	//while (!wnd.mouse.IsEmpty())
+		//	//{
+		//	//	const auto e = wnd.mouse.Read();
+		//	//	switch (e.GetType())
+		//	//	{
+		//	//	case Mouse::Event::Type::Leave:
+		//	//		wnd.SetTitle("Gone!");
+		//	//		break;
+		//	//	case Mouse::Event::Type::Move:
+		//	//	{
+		//	//		std::ostringstream oss;
+		//	//		oss << "Mouse moved to (" << e.GetPosX() << "," << e.GetPosY() << ")";
+		//	//		wnd.SetTitle(oss.str());
+		//	//	}
+		//	//	break;
+		//	//	}
+		//	//}
 
 
-			//// do app logic (test) mouse original test
-			//while (!wnd.mouse.IsEmpty())
-			//{
-			//	const auto e = wnd.mouse.Read();
-			//	if (e.GetType() == Mouse::Event::Type::Move)
-			//	{
-			//		std::ostringstream oss;
-			//		oss << "Mouse Position: (" << e.GetPosX() << "," << e.GetPosY() << ")";
-			//		wnd.SetTitle(oss.str());
-			//	}
-			//}
+		//	//// do app logic (test) mouse original test
+		//	//while (!wnd.mouse.IsEmpty())
+		//	//{
+		//	//	const auto e = wnd.mouse.Read();
+		//	//	if (e.GetType() == Mouse::Event::Type::Move)
+		//	//	{
+		//	//		std::ostringstream oss;
+		//	//		oss << "Mouse Position: (" << e.GetPosX() << "," << e.GetPosY() << ")";
+		//	//		wnd.SetTitle(oss.str());
+		//	//	}
+		//	//}
 
-			//if (wnd.kbd.KeyIsPressed(VK_SPACE)) {
-			//	MessageBox(nullptr, "Something Happon!", "Space Key Was Pressed", MB_OK | MB_ICONEXCLAMATION);
-			//}
-			//if (wnd.kbd.KeyIsPressed(VK_MENU))	//alt
-			//{
-			//	MessageBox(nullptr, "Something Happon!", "The alt key was pressed", MB_OK | MB_ICONEXCLAMATION);
-			//}
-		}
-		// check if GetMessage call itself borked
-		if (gResult == -1) {
-			throw CHWND_LAST_EXCEPT();	//error
-		}
-		// wParam here is the value passed to PostQuitMessage
-		return msg.wParam;
+		//	//if (wnd.kbd.KeyIsPressed(VK_SPACE)) {
+		//	//	MessageBox(nullptr, "Something Happon!", "Space Key Was Pressed", MB_OK | MB_ICONEXCLAMATION);
+		//	//}
+		//	//if (wnd.kbd.KeyIsPressed(VK_MENU))	//alt
+		//	//{
+		//	//	MessageBox(nullptr, "Something Happon!", "The alt key was pressed", MB_OK | MB_ICONEXCLAMATION);
+		//	//}
+		//}
+		//// check if GetMessage call itself borked
+		//if (gResult == -1) {
+		//	throw CHWND_LAST_EXCEPT();	//error
+		//}
+		//// wParam here is the value passed to PostQuitMessage
+		//return msg.wParam;
 	}
 	catch (const D3DException &e) {
 		MessageBox(nullptr, e.what(), e.GetType(), MB_OK | MB_ICONEXCLAMATION);
