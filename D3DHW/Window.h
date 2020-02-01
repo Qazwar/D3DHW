@@ -2,6 +2,7 @@
 #include"ChilliWin.h"
 #include"D3DException.h"
 #include"Keyboard.h"
+#include"Mouse.h"
 
 //自定义的window
 class Window {
@@ -41,6 +42,8 @@ public:
 	~Window();
 	Window(const Window&) = delete;
 	Window& operator=(const Window&) = delete;
+	void SetTitle(const std::string& title);	//set window title, fix FAIL
+
 	
 private:
 	static LRESULT CALLBACK HandleMsgSetup(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) noexcept;
@@ -54,6 +57,7 @@ private:
 
 public:
 	Keyboard kbd;
+	Mouse mouse;
 };
 
 
