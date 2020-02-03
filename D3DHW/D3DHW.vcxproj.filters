@@ -39,6 +39,9 @@
     <ClCompile Include="ChiliTimer.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="COMtest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="WindowsMessageMap.h">
