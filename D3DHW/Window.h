@@ -3,7 +3,9 @@
 #include"D3DException.h"
 #include"Keyboard.h"
 #include"Mouse.h"
+#include"Graphics.h"
 #include <optional>
+#include<memory>
 
 //自定义的window
 class Window {
@@ -45,7 +47,8 @@ public:
 	Window& operator=(const Window&) = delete;
 	void SetTitle(const std::string& title);	//set window title, fix FAIL
 	static std::optional<int> ProcessMessages();	//rewrite message queue
-
+	//get Graphics through Gfx() cause need a hwnd to init Graphics
+	Graphics& Gfx();
 	
 private:
 	static LRESULT CALLBACK HandleMsgSetup(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) noexcept;
@@ -56,6 +59,7 @@ private:
 	int width;
 	int height;
 	HWND hWnd;
+	std::unique_ptr<Graphics> pGfx;
 
 public:
 	Keyboard kbd;
