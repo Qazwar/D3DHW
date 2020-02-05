@@ -1,6 +1,7 @@
 #pragma once
 #include"ChilliWin.h"
 #include"D3DException.h"
+#include <wrl.h>
 #include"DxgiInfoManager.h"
 #include<d3d11.h>
 
@@ -39,7 +40,7 @@ public:
 
 public:
 	Graphics(HWND hWnd);
-	~Graphics();
+	~Graphics() = default;
 	//delete copy constructor and = operator
 	Graphics(const Graphics&) = delete;
 	Graphics& operator=(const Graphics&) = delete;
@@ -51,9 +52,10 @@ private:
 	DxgiInfoManager infoManager;	//for showing debug info
 #endif
 	//必要的3个指针
-	ID3D11Device* pDevice = nullptr;
-	IDXGISwapChain* pSwap = nullptr;
-	ID3D11DeviceContext* pContext = nullptr;
-	ID3D11RenderTargetView* pTarget = nullptr;
+	Microsoft::WRL::ComPtr<ID3D11Device> pDevice;
+	Microsoft::WRL::ComPtr<IDXGISwapChain> pSwap;
+	Microsoft::WRL::ComPtr<ID3D11DeviceContext> pContext;
+	Microsoft::WRL::ComPtr<ID3D11RenderTargetView> pTarget;
+
 	
 };

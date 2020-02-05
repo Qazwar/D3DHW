@@ -113,5 +113,8 @@
     <None Include="DXTrace.inl">
       <Filter>Dxerr</Filter>
     </None>
+    <None Include="Note.md">
+      <Filter>资源文件</Filter>
+    </None>
   </ItemGroup>
 </Project>
