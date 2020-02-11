@@ -28,6 +28,10 @@ bool GameApp::Init()
 	if (!InitResource())
 		return false;
 
+	//初始化鼠标，键盘不需要
+	m_pMouse->SetWindow(m_hMainWnd);
+	m_pMouse->SetMode(DirectX::Mouse::MODE_ABSOLUTE);
+
 	return true;
 }
 
@@ -39,9 +43,34 @@ void GameApp::OnResize()
 void GameApp::UpdateScene(float dt)
 {
 	
-	static float phi = 0.0f, theta = 0.0f;
-	phi += 0.0001f, theta += 0.00015f;
-	m_CBuffer.world = XMMatrixTranspose(XMMatrixRotationX(phi) * XMMatrixRotationY(theta));
+	static float cubePhi = 0.0f, cubeTheta = 0.0f;
+	// 获取鼠标状态
+	Mouse::State mouseState = m_pMouse->GetState();
+	Mouse::State lastMouseState = m_MouseTracker.GetLastState();
+	//获取键盘状态
+	Keyboard::State keyState = m_pKeyboard->GetState();
+	Keyboard::State lastKeyState = m_KeyboardTracker.GetLastState();
+	
+	// 更新鼠标按钮状态跟踪器，仅当鼠标按住的情况下才进行移动
+	m_MouseTracker.Update(mouseState);
+	m_KeyboardTracker.Update(keyState);
+	if(mouseState.leftButton == true && m_MouseTracker.leftButton ==m_MouseTracker.HELD)
+	{
+		cubeTheta -= (mouseState.x - lastMouseState.x) * 0.01f;
+		cubePhi -= (mouseState.y - lastMouseState.y) * 0.01f;
+	}
+
+	if (keyState.IsKeyDown(Keyboard::W))
+		cubePhi += dt * 2;
+	if (keyState.IsKeyDown(Keyboard::S))
+		cubePhi -= dt * 2;
+	if (keyState.IsKeyDown(Keyboard::A))
+		cubeTheta += dt * 2;
+	if (keyState.IsKeyDown(Keyboard::D))
+		cubeTheta -= dt * 2;
+
+
+	m_CBuffer.world = XMMatrixTranspose(XMMatrixRotationX(cubePhi) * XMMatrixRotationY(cubeTheta));
 	// 更新常量缓冲区，让立方体转起来
 	D3D11_MAPPED_SUBRESOURCE mappedData;
 	HR(m_pd3dImmediateContext->Map(m_pConstantBuffer.Get(), 0, D3D11_MAP_WRITE_DISCARD, 0, &mappedData));
