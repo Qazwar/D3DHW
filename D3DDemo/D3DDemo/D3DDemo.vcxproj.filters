@@ -45,6 +45,9 @@
     <ClCompile Include="Keyboard.cpp">
       <Filter>通用文件</Filter>
     </ClCompile>
+    <ClCompile Include="Vertex.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="d3dApp.h">
@@ -68,12 +71,27 @@
     <ClInclude Include="Keyboard.h">
       <Filter>通用文件</Filter>
     </ClInclude>
+    <ClInclude Include="HLSL\Geometry.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Vertex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LightHelper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="HLSL\Triangle.hlsli">
       <Filter>着色器</Filter>
     </None>
     <None Include="HLSL\Cube.hlsli">
+      <Filter>着色器</Filter>
+    </None>
+    <None Include="HLSL\LightHelper.hlsli">
+      <Filter>着色器</Filter>
+    </None>
+    <None Include="HLSL\Light.hlsli">
       <Filter>着色器</Filter>
     </None>
   </ItemGroup>
@@ -88,6 +106,12 @@
       <Filter>着色器</Filter>
     </FxCompile>
     <FxCompile Include="HLSL\Cube_VS.hlsl">
+      <Filter>着色器</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\Light_VS.hlsl">
+      <Filter>着色器</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\Light_PS.hlsl">
       <Filter>着色器</Filter>
     </FxCompile>
   </ItemGroup>
