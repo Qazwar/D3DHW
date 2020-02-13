@@ -1,7 +1,5 @@
-﻿  compilation object save succeeded; see Y:\Codebase\D3DHW\D3DDemo\D3DDemo\HLSL\Light_PS.cso
-  compilation object save succeeded; see Y:\Codebase\D3DHW\D3DDemo\D3DDemo\HLSL\Light_VS.cso
-  GameApp.cpp
-  Vertex.cpp
+﻿  GameApp.cpp
   WinMain.cpp
+  d3dApp.cpp
   正在生成代码...
   D3DDemo.vcxproj -> Y:\Codebase\D3DHW\D3DDemo\D3DDemo\D3DDemo.exe

@@ -1,0 +1,64 @@
+﻿“D3DDemo.exe”(Win32): 已加载“\\Mac\Home\Codebase\D3DHW\D3DDemo\D3DDemo\D3DDemo.exe”。已加载符号。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\ntdll.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\kernel32.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\KernelBase.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\apphelp.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\user32.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\win32u.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\D3DCompiler_47.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\d3d11.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\ucrtbase.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\gdi32.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\msvcrt.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\rpcrt4.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\gdi32full.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\msvcp_win.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\sspicli.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\kernel.appcore.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\cryptbase.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\dxgi.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\bcryptprimitives.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\msvcp140d.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\sechost.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\cryptsp.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\d2d1.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\vcruntime140d.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\ucrtbased.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\ucrtbased.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已卸载“C:\Windows\SysWOW64\ucrtbased.dll”
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\DWrite.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\DXCore.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\cfgmgr32.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\combase.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\imm32.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\uxtheme.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\msctf.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\oleaut32.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\advapi32.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Program Files (x86)\Parallels\Parallels Tools\Services\WoW\prl_hook.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\dwmapi.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\TextInputFramework.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\CoreUIComponents.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\CoreMessaging.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\ntmarta.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\SHCore.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\WinTypes.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\WinTypes.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已卸载“C:\Windows\SysWOW64\WinTypes.dll”
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\iertutil.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\DXGIDebug.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\ResourcePolicyClient.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已卸载“C:\Windows\SysWOW64\ResourcePolicyClient.dll”
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\prl_umdd10.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\d3d11_3SDKLayers.dll”。无法查找或打开 PDB 文件。
+DXGI WARNING: IDXGIFactory::CreateSwapChain: Blt-model swap effects (DXGI_SWAP_EFFECT_DISCARD and DXGI_SWAP_EFFECT_SEQUENTIAL) are legacy swap effects that are predominantly superceded by their flip-model counterparts (DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL and DXGI_SWAP_EFFECT_FLIP_DISCARD). Please consider updating your application to leverage flip-model swap effects to benefit from modern presentation enhancements. More information is available at http://aka.ms/dxgiflipmodel. [ MISCELLANEOUS WARNING #294: ]
+“D3DDemo.exe”(Win32): 已加载“C:\Windows\SysWOW64\ole32.dll”。无法查找或打开 PDB 文件。
+“D3DDemo.exe”(Win32): 已卸载“C:\Windows\SysWOW64\prl_umdd10.dll”
+线程 0x35b0 已退出，返回值为 0 (0x0)。
+线程 0x2e60 已退出，返回值为 0 (0x0)。
+线程 0x3154 已退出，返回值为 0 (0x0)。
+线程 0x301c 已退出，返回值为 0 (0x0)。
+线程 0x3868 已退出，返回值为 0 (0x0)。
+线程 0x32c8 已退出，返回值为 0 (0x0)。
+线程 0x22ec 已退出，返回值为 0 (0x0)。
+程序“[10992] D3DDemo.exe”已退出，返回值为 0 (0x0)。
