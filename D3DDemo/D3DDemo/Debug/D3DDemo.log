@@ -1,5 +1,2 @@
-﻿  d3dApp.cpp
-  d3dUtil.cpp
-  GameApp.cpp
-  正在生成代码...
+﻿  Camera.cpp
   D3DDemo.vcxproj -> Y:\Codebase\D3DHW\D3DDemo\D3DDemo\D3DDemo.exe
