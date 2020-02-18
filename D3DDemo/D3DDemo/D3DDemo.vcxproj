@@ -23,6 +23,7 @@
     <ProjectGuid>{328F0DCF-3C30-4E70-B272-85521FD6E2DE}</ProjectGuid>
     <RootNamespace>D3DDemo</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <ProjectName>D3DCarGame</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

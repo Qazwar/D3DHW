@@ -1,2 +1,25 @@
-﻿  Camera.cpp
-  D3DDemo.vcxproj -> Y:\Codebase\D3DHW\D3DDemo\D3DDemo\D3DDemo.exe
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: 中间目录(Debug\)包含从另一个项目(D3DDemo.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
+  compilation object save succeeded; see Y:\Codebase\D3DHW\D3DDemo\D3DDemo\HLSL\Basic_PS_2D.cso
+  compilation object save succeeded; see Y:\Codebase\D3DHW\D3DDemo\D3DDemo\HLSL\Basic_PS_3D.cso
+  compilation object save succeeded; see Y:\Codebase\D3DHW\D3DDemo\D3DDemo\HLSL\Basic_VS_2D.cso
+  compilation object save succeeded; see Y:\Codebase\D3DHW\D3DDemo\D3DDemo\HLSL\Basic_VS_3D.cso
+  compilation object save succeeded; see Y:\Codebase\D3DHW\D3DDemo\D3DDemo\HLSL\Cube_PS.cso
+  compilation object save succeeded; see Y:\Codebase\D3DHW\D3DDemo\D3DDemo\HLSL\Cube_VS.cso
+  compilation object save succeeded; see Y:\Codebase\D3DHW\D3DDemo\D3DDemo\HLSL\Light_PS.cso
+  compilation object save succeeded; see Y:\Codebase\D3DHW\D3DDemo\D3DDemo\HLSL\Light_VS.cso
+  compilation object save succeeded; see Y:\Codebase\D3DHW\D3DDemo\D3DDemo\HLSL\Triangle_PS.cso
+  compilation object save succeeded; see Y:\Codebase\D3DHW\D3DDemo\D3DDemo\HLSL\Triangle_VS.cso
+  Camera.cpp
+  d3dApp.cpp
+  d3dUtil.cpp
+  DDSTextureLoader.cpp
+  DXTrace.cpp
+  GameApp.cpp
+  GameTimer.cpp
+  Keyboard.cpp
+  Mouse.cpp
+  Vertex.cpp
+  WICTextureLoader.cpp
+  WinMain.cpp
+  正在生成代码...
+  D3DDemo.vcxproj -> Y:\Codebase\D3DHW\D3DDemo\D3DDemo\D3DCarGame.exe

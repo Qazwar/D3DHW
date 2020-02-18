@@ -105,7 +105,7 @@ void GameApp::UpdateScene(float dt)
 	auto cam3rd = std::dynamic_pointer_cast<ThirdPersonCamera>(m_pCamera);
 
 
-	if (m_CameraMode == CameraMode::FirstPerson || m_CameraMode == CameraMode::Free)
+	if (m_CameraMode == CameraMode::FirstPerson || m_CameraMode == CameraMode::Free )
 	{
 		// 第一人称/自由摄像机的操作
 
