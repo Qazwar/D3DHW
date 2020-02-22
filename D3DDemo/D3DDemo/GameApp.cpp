@@ -131,8 +131,8 @@ void GameApp::UpdateScene(float dt)
 
 		// 将位置限制在[-8.9f, 8.9f]的区域内
 		// 不允许穿地
-		XMFLOAT3 adjustedPos;
-		XMStoreFloat3(&adjustedPos, XMVectorClamp(cam1st->GetPositionXM(), XMVectorSet(-8.9f, 0.0f, -8.9f, 0.0f), XMVectorReplicate(8.9f)));
+		XMFLOAT3 adjustedPos = cam1st->GetPosition();
+		//XMStoreFloat3(&adjustedPos, XMVectorClamp(cam1st->GetPositionXM(), XMVectorSet(-8.9f, 0.0f, -8.9f, 0.0f), XMVectorReplicate(8.9f)));
 		cam1st->SetPosition(adjustedPos);
 
 		// 仅在第一人称模式移动箱子
@@ -197,7 +197,7 @@ void GameApp::UpdateScene(float dt)
 	{
 		if (!cam1st)
 		{
-			cam1st.reset(new FirstPersonCamera);
+			cam1st.reset(new FirstPersonCamera);	
 			cam1st->SetFrustum(XM_PI / 3, AspectRatio(), 0.5f, 1000.0f);
 			m_pCamera = cam1st;
 		}
@@ -317,20 +317,20 @@ bool GameApp::InitResource()
 	m_WoodCrate.SetTexture(texture.Get());
 
 	// 初始化地板
-	HR(CreateDDSTextureFromFile(m_pd3dDevice.Get(), L"Texture\\floor.dds", nullptr, texture.ReleaseAndGetAddressOf()));
+	HR(CreateDDSTextureFromFile(m_pd3dDevice.Get(), L"Texture\\newfloor.dds", nullptr, texture.ReleaseAndGetAddressOf()));
 	m_Floor.SetBuffer(m_pd3dDevice.Get(),
-		Geometry::CreatePlane(XMFLOAT2(20.0f, 20.0f), XMFLOAT2(5.0f, 5.0f)));
+		Geometry::CreatePlane(XMFLOAT2(50.0f, 50.0f), XMFLOAT2(5.0f, 5.0f)));
 	m_Floor.SetTexture(texture.Get());
 	m_Floor.SetWorldMatrix(XMMatrixTranslation(0.0f, -1.0f, 0.0f));
 
 	// 初始化墙体
-	m_Walls.resize(4);
-	HR(CreateDDSTextureFromFile(m_pd3dDevice.Get(), L"Texture\\brick.dds", nullptr, texture.ReleaseAndGetAddressOf()));
+	m_Walls.resize(3);
+	HR(CreateDDSTextureFromFile(m_pd3dDevice.Get(), L"Texture\\newbrick.dds", nullptr, texture.ReleaseAndGetAddressOf()));
 	// 这里控制墙体四个面的生成
-	for (int i = 0; i < 4; ++i)
+	for (int i = 0; i < 3; ++i)
 	{
 		m_Walls[i].SetBuffer(m_pd3dDevice.Get(),
-			Geometry::CreatePlane(XMFLOAT2(20.0f, 8.0f), XMFLOAT2(5.0f, 1.5f)));
+			Geometry::CreatePlane(XMFLOAT2(20.0f, 8.0f), XMFLOAT2(5.0f, 0.5f)));
 		XMMATRIX world = XMMatrixRotationX(-XM_PIDIV2) * XMMatrixRotationY(XM_PIDIV2 * i)
 			* XMMatrixTranslation(i % 2 ? -10.0f * (i - 2) : 0.0f, 3.0f, i % 2 == 0 ? -10.0f * (i - 1) : 0.0f);
 		m_Walls[i].SetWorldMatrix(world);
@@ -431,7 +431,7 @@ bool GameApp::InitResource()
 	m_Walls[0].SetDebugObjectName("Walls[0]");
 	m_Walls[1].SetDebugObjectName("Walls[1]");
 	m_Walls[2].SetDebugObjectName("Walls[2]");
-	m_Walls[3].SetDebugObjectName("Walls[3]");
+	//m_Walls[3].SetDebugObjectName("Walls[3]");
 
 
 	return true;
